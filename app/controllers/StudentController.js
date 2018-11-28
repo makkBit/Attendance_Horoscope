@@ -1,6 +1,5 @@
 'use strict';
 var Student = require('../model/Student.js');
-var Question = require('../model/Question.js');
 
 var StudentController = function(){
 

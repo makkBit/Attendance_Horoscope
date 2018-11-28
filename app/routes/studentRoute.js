@@ -10,6 +10,10 @@ var studentController = new StudentController();
 
 module.exports = function(app, passport){
 
+    app.get('/', function (req, res) {
+        res.render('home/index');
+    });
+
     app.route('/studentsignin')
     	.get(function(req, res) {
             if (req.isAuthenticated())
@@ -33,6 +37,27 @@ module.exports = function(app, passport){
             failureFlash: true
         }
     ));
+
+    app.get('/studentdashboard', isSignedIn, function (req, res) {
+        var fomatted_date = moment(req.user.dob).format('DD-MM-YYYY');
+
+        res.render('student/studentdashboard', {
+            email: req.user.email,
+            name: req.user.name,
+            fathername: req.user.fathername,
+            dob: fomatted_date,
+            examcode: req.user.examcode
+        });
+    });
+
+    app.get('/studentlogout', isSignedIn, function (req, res) {
+        req.logout();
+        res.redirect('/studentsignin');
+    });
+
+    app.get('/stats', isSignedIn, function (req, res) {
+        res.render('student/stats');
+    });
     
 
     // route middleware to make sure a user is logged in

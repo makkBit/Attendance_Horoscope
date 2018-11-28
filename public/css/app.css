@@ -9,6 +9,9 @@ body {
 
 }
 
+p{
+  color: white !important;
+}
 #wrap {
   min-height: 550px;
   padding-top: 30px;

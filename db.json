@@ -1,0 +1,46 @@
+{
+    "students": [
+    {
+        "name": "Mahak",
+        "id": 1,
+        "totalclasses": 50,
+        "totalattended": 15,
+        "classperday": 8
+    },
+    {
+        "id": 2,
+        "name": "Anshu",
+        "totalclasses": 50,
+        "totalattended": 45,
+        "classperday": 8
+    },
+    {
+        "id": 3,
+        "name": "Nishesh",
+        "totalclasses": 50,
+        "totalattended": 25,
+        "classperday": 8
+    },
+    {
+        "id": 4,
+        "name": "Aakar Mehra",
+        "totalclasses": 50,
+        "totalattended": 36,
+        "classperday": 8
+    },
+    {
+        "id": 5,
+        "name": "harry",
+        "totalclasses": 50,
+        "totalattended": 5,
+        "classperday": 8
+    },
+    {
+        "id": 6,
+        "name": "tom",
+        "totalclasses": 50,
+        "totalattended": 5,
+        "classperday": 8
+    }
+    ]
+}
